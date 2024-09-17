@@ -1,0 +1,31 @@
+I have provided two files namely 'Dockerfile' and 'requirements.txt'.
+first of all install Docker and Nextflow (>=22.10.1)
+
+To run the nextflow pipeline using a Docker container, follow these steps:
+
+1. Build the Docker image using the provided 'Dockerfile' by running the command below. This calls up the supplied requirements.txt file:
+    docker build -t solution-container .
+
+2. Optionally you can run the Docker container with the necessary arguments for any of the three script:
+    docker run -v /path/to/host/data:/bin solution-container python solution_run.py -m mutations_processed.tsv -g Gene_KOs.tsv -o output
+
+    # Replace the '/path/to/host/data' placeholder with the directory where the 'solution_package' folder is located.
+    # Modify the -m, and -g  mandatory arguments to specify the input data and output directory.
+    # Optionally, you can modify the -o, -v, -i, -c, -f, -l arguments to customize the output directory, value, index, figsize and column columns, as well as the log-level.
+
+    e.g.
+    docker run -v /Users/joachimnwezeobi/Documents/jobs/mosaic/bin:/bin solution-container python solution.py -m Mutations.tsv -g Gene_KOs.tsv -o results
+    
+3. To run the test_solution.py script, run the code below:
+    docker run -v /path/to/host/data:/bin solution-container python -m unittest test_solution.py
+
+    e.g.
+    docker run -v /Users/joachimnwezeobi/Documents/jobs/mosaic/bin:/bin solution-container python -m unittest solution_test.py
+
+
+4. To run the nextflow pipeline, run the codes below:
+    nextflow run container_combine.nf # This will run the pipeline without splitting the input dataframes
+    nextflow run container_combine.nf --split true --splitsize 7 # This will run the pipeline and split the dataframes into the sizes specified by --splitsize
+
+    # Optionally, you can modify the input datasets and settings by calling the parameters and supplying the appropriate settings.
+    # Run nextflow run container_combine.nf --help to view the parameters to include. This is similar to those listed in (2) above
