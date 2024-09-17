@@ -1,8 +1,8 @@
 # Documentation
 
 ## Overview
-The 'solution_run.py' script is a Python-based tool designed to conduct statistical analyses on gene knockout and mutation data. It is best run as part of a pipeline also including 'solution_prep.py' and 'solution_split.py'
-It generates a clustered heatmap to provide a visual representation of the results. 
+The 'solution_run.py' script is a Python-based tool designed to conduct statistical analyses on gene knockout and mutation data. It is best run as a nextflow pipeline "container_combine.nf" which calls 'solution_prep.py', 'solution_split.py' and 'solution_run.py.
+The code generates a clustered heatmap to provide a visual representation of the results. 
 This script reads input data from TSV files, performs one-way ANOVA tests on all gene-mutation pairs, and creates a heatmap to illustrate the associations between genes and mutations.
 
 The script also includes a set of unit tests to ensure the correctness of its functions. These tests are defined in the TestSolution class within the 'test_soluttion.py' script.
