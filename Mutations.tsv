@@ -1,0 +1,11 @@
+Mutation	ModelM	ModelO	ModelS	ModelA	ModelI	ModelC	ModelT	ModelH	ModelE	ModelR	ModelA2	ModelP	ModelE2	ModelU	ModelT2	ModelI2	ModelC2	ModelS2
+Gene1_mut	0	0	0	0	0	0	0	1	1	1	0	0	1	1	0	1	1	0
+Gene2_mut	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	1
+Gene3_mut	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0
+Gene4_mut	1	1	1	1	1	1	1	1	0	1	1	1	1	1	1	1	0	1
+Gene5_mut	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1
+Gene6_mut	0	0	0	0	0	0	1	1	0	0	0	0	1	1	0	0	1	1
+Gene7_mut	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	1
+Gene8_mut	0	0	0	0	0	0	1	1	0	0	0	0	0	1	0	0	1	0
+Gene9_mut	0	0	0	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0
+Gene10_mut	0	0	0	0	0	0	0	0	1	0	0	1	0	1	0	0	0	1
